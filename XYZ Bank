@@ -34,7 +34,7 @@ class BankingOperations
     static double updateVal=100;
     public static void Balance()
     {
-        System.out.println("Balance "+Arrays.toString(Balances.toArray()).replace("[","").replace("]",""));
+        System.out.println("Balance USD "+Arrays.toString(Balances.toArray()).replace("[","").replace("]",""));
     }
     public static void Deposit(double depositAmount)
     {
@@ -57,7 +57,7 @@ class BankingOperations
             if(Balances.get(0)>=100)
             {
                 updateVal = Balances.get(0);
-                System.out.println("Charges " + charges);
+                System.out.println("Charges USD  " + charges);
                 System.out.println("Withdrawn Successfully!!!");
             }
             else
@@ -75,7 +75,7 @@ class BankingOperations
         cashBack =(swipes*1)/100;
         Balances.set(Balances.indexOf(updateVal),Balances.get(0)+cashBack);
         updateVal = Balances.get(0);
-        System.out.println("CashBack "+cashBack);
+        System.out.println("CashBack USD "+cashBack);
         System.out.println("Cashback added Successfully!!!");
 
     }
